@@ -1,18 +1,32 @@
-cmake_minimum_required(VERSION 3.18)
-project(lzo_plugin)
+#cmake_minimum_required(VERSION 3.18)
+#project(lzo_plugin)
 #=============================================================================
 # do some plugin specific configuration
 #=============================================================================
 #find_package(LZO2 REQUIRED)
-find_package(HDF5 REQUIRED COMPONENTS C) 
+#find_package(HDF5 REQUIRED COMPONENTS C) 
 
 #=============================================================================
 # setup the plugin name
 #=============================================================================
-set(PLUGIN_NAME h5lzo)
+#set(PLUGIN_NAME h5lzo)
 
 #=============================================================================
 # adding required subdirectories
 #=============================================================================
+#add_subdirectory(src)
+#add_subdirectory(test)
+
+message(STATUS "Building with LZO plugin")
+
+#==============================================================================
+# set the plugin name
+#==============================================================================
+set(PLUGIN_NAME hdf5lzo)
+
+#==============================================================================
+# add source directories
+#==============================================================================
 add_subdirectory(src)
 #add_subdirectory(test)
+

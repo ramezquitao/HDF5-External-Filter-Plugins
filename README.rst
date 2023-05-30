@@ -8,6 +8,7 @@ recompiling your application. This repository provides external filters
 for HDF5 for
 
 * the LZ4 compression algorithm
+* the LZO compression algorithm
 * BZip2 compression
 * and the BLOSC library.
 
@@ -19,7 +20,13 @@ version 3 or higher.  To build, use commands like these::
 
     mkdir build
     cd build
-    cmake .. -DENABLE_BITSHUFFLE_PLUGIN=yes -DENABLE_LZ4_PLUGIN=yes -DENABLE_BZIP2_PLUGIN=yes -DCMAKE_INSTALL_PREFIX=/usr/local
+    cmake .. -DENABLE_BITSHUFFLE_PLUGIN=yes -DENABLE_LZ4_PLUGIN=yes -DENABLE_BZIP2_PLUGIN=yes -DENABLE_LZO_PLUGIN=yes -DCMAKE_INSTALL_PREFIX=/usr/local
+    make install
+
+For Debian 12 use::
+    mkdir build
+    cd build
+    cmake .. -DENABLE_BITSHUFFLE_PLUGIN=yes -DENABLE_LZ4_PLUGIN=yes -DENABLE_BZIP2_PLUGIN=yes -DENABLE_LZO_PLUGIN=yes -DCMAKE_INSTALL_LIBDIR=/usr/lib/x86_64-linux-gnu/hdf5/serial/
     make install
 
 For detailed information about the installation procedures for each module,
